@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'maven'
+
+ext {
+	projectName = "iecbom"
+}
+
+sourceCompatibility = 1.7
+version='1.0.1'
+
+apply from: 'http://dev.iecokc.com:8081/nexus/service/local/repositories/iec/content/gradle/common/1.0/common-1.0.gradle'
+
+dependencies {
+	
+	transdeployables 'log4j:log4j:1.2.17'
+	
+	nondeployables 'javax.ejb:ejb-api:3.0'
+	
+	clientCompile configurations.deployables
+	clientCompile configurations.transdeployables
+	clientCompile configurations.nondeployables
+	
+	compile configurations.deployables
+	compile configurations.transdeployables
+	compile configurations.nondeployables
+	compile sourceSets.client.output
+	
+	webappCompile configurations.deployables
+	webappCompile configurations.transdeployables
+	webappCompile configurations.nondeployables
+	webappCompile sourceSets.client.output
+	webappCompile sourceSets.main.output
+	
+	testCompile 'junit:junit:4.9'
+	testCompile 'jtopen:jtopen:4.9'
+		
+}

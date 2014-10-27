@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bom PUBLIC "-//BillOfMaterials//BillOfMaterials DTD//EN" "http://iecapp0/dtd/bomstructure.dtd">
+<bom>
+	<!-- <prn></prn>  -->
+	<bomdata>
+		<bomentry>
+			<row>1</row>
+			<depth>0</depth>
+			<product-number>D065-00067914</product-number>
+			<description>RA PNL ASSY #1 M*Y03/04</description>
+			<secondary-description></secondary-description>
+			<!-- <quantity>1</quantity> -->
+			<type-flag>M</type-flag>
+			<last-ecn>06-0960</last-ecn>
+			<ecn-date>10/06/06</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>EA</unit-of-measure>
+		</bomentry>
+		<bomentry>
+			<row>2</row>
+			<depth>1</depth>
+			<product-number>D065-00067895</product-number>
+			<description>RA PNL #1 ADA M*Y03/04 ARC WHT</description>
+			<secondary-description></secondary-description>
+			<quantity>1</quantity>
+			<type-flag>M</type-flag>
+			<last-ecn>06-0960</last-ecn>
+			<ecn-date>10/06/06</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>EA</unit-of-measure>
+		</bomentry>	
+		<bomentry>
+			<row>3</row>
+			<depth>2</depth>
+			<product-number>D065-00067896</product-number>
+			<description>RA PNL #1 ADA M*Y03/04</description>
+			<secondary-description></secondary-description>
+			<quantity>1</quantity>
+			<type-flag>M</type-flag>
+			<last-ecn>06-0960</last-ecn>
+			<ecn-date>10/06/06</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>EA</unit-of-measure>
+		</bomentry>	
+		<bomentry>
+			<row>4</row>
+			<depth>3</depth>
+			<product-number>D065-00067897</product-number>
+			<description>RA PNL #1 ADA M*Y03/04</description>
+			<secondary-description></secondary-description>
+			<quantity>1</quantity>
+			<type-flag>M</type-flag>
+			<last-ecn>06-0960</last-ecn>
+			<ecn-date>10/06/06</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material>R035-70318000</raw-material>
+			<required-qty>14.68</required-qty>
+			<engineering-qty>17.61</engineering-qty>			
+			<unit-of-measure>LB</unit-of-measure>
+		</bomentry>
+		<bomentry>
+			<row>5</row>
+			<depth>3</depth>
+			<product-number>D125-90004259</product-number>
+			<description>DECO PNL CLIP M*Y 300-1200</description>
+			<secondary-description></secondary-description>
+			<quantity>1</quantity>
+			<type-flag>M</type-flag>
+			<last-ecn>06-0960</last-ecn>
+			<ecn-date>10/06/06</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material>R035-70318000</raw-material>
+			<required-qty>0.38</required-qty>
+			<engineering-qty>0.46</engineering-qty>			
+			<unit-of-measure>LB</unit-of-measure>
+		</bomentry>	
+		<bomentry>
+			<row>6</row>
+			<depth>2</depth>
+			<product-number>P000-70014816</product-number>
+			<description>BKD PNT ARCT WHT</description>
+			<secondary-description></secondary-description>
+			<quantity>0</quantity>
+			<type-flag>B</type-flag>
+			<last-ecn>XX-XXXX</last-ecn>
+			<ecn-date>MM/DD/YY</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>LB</unit-of-measure>
+		</bomentry>
+		<bomentry>
+			<row>7</row>
+			<depth>1</depth>
+			<product-number>D170-00067660</product-number>
+			<description>PNL DECO INSUL 15.1X31.8</description>
+			<secondary-description></secondary-description>
+			<quantity>1</quantity>
+			<type-flag>M</type-flag>
+			<last-ecn>06-0960</last-ecn>
+			<ecn-date>10/06/06</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material>R040-70012801</raw-material>
+			<required-qty>3.39</required-qty>
+			<engineering-qty>4.23</engineering-qty>			
+			<unit-of-measure>SF</unit-of-measure>
+		</bomentry>
+		<bomentry>
+			<row>8</row>
+			<depth>1</depth>
+			<product-number>G070-70019824</product-number>
+			<description>CMLCK RTNR</description>
+			<secondary-description></secondary-description>
+			<quantity>2</quantity>
+			<type-flag>B</type-flag>
+			<last-ecn>XX-XXXX</last-ecn>
+			<ecn-date>MM/DD/YY</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>EA</unit-of-measure>
+		</bomentry>
+		<bomentry>
+			<row>9</row>
+			<depth>1</depth>
+			<product-number>G070-70019823</product-number>
+			<description>CMLCK PAWL</description>
+			<secondary-description></secondary-description>
+			<quantity>2</quantity>
+			<type-flag>B</type-flag>
+			<last-ecn>XX-XXXX</last-ecn>
+			<ecn-date>MM/DD/YY</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>EA</unit-of-measure>
+		</bomentry>			
+		<bomentry>
+			<row>10</row>
+			<depth>1</depth>
+			<product-number>G070-70019837</product-number>
+			<description>CMLCK SHFT HEX HEAD 2 IN</description>
+			<secondary-description></secondary-description>
+			<quantity>2</quantity>
+			<type-flag>B</type-flag>
+			<last-ecn>XX-XXXX</last-ecn>
+			<ecn-date>MM/DD/YY</ecn-date>
+			<obsolete>false</obsolete>
+			<raw-material></raw-material>
+			<required-qty></required-qty>
+			<engineering-qty></engineering-qty>			
+			<unit-of-measure>EA</unit-of-measure>
+		</bomentry>			
+	</bomdata>
+</bom>

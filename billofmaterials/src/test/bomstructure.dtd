@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bom (prn, bomdata)>
+<!ELEMENT prn (#PCDATA)>
+<!ELEMENT bomdata (bomentry+)>
+ <!ELEMENT bomentry (row, depth, product-number, description, secondary-description,
+  quantity, type-flag, last-ecn, ecn-date, obsolete, raw-material, 
+  engineering-qty, required-qty, unit-of-measure)>
+<!ELEMENT row (#PCDATA)>
+<!ELEMENT depth (#PCDATA)>
+<!ELEMENT product-number (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT secondary-description (#PCDATA)>
+<!ELEMENT quantity (#PCDATA) >
+<!ELEMENT type-flag (#PCDATA)>
+<!ELEMENT last-ecn (#PCDATA)>
+<!ELEMENT ecn-date (#PCDATA)>
+<!ELEMENT obsolete (#PCDATA)>
+<!ELEMENT raw-material (#PCDATA)>
+<!ELEMENT engineering-qty (#PCDATA)>
+<!ELEMENT required-qty (#PCDATA)>
+<!ELEMENT unit-of-measure (#PCDATA)>

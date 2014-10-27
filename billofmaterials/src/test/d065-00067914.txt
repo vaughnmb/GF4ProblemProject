@@ -1,0 +1,20 @@
+1   0 D065-00067914   RA PNL ASSY #1 M*Y03/04                                       1           M 06-0960    10/06/06                                           EA 
+                                                                                                                                                                   
+2   1 D065-00067895   RA PNL #1 ADA M*Y03/04 ARC WHT                                1           M 06-0960    10/06/06                                           EA 
+                                                                                                                                                                   
+3   2 D065-00067896   RA PNL #1 ADA M*Y03/04                                        1           M 06-0960    10/06/06                                           EA 
+                                                                                                                                                                   
+4   3 D065-00067897   RA PNL #1 ADA M*Y03/04                                        1           M 06-0960    10/06/06   R035-70318000   14.68       17.61       LB 
+                                                                                                                                                                   
+5   3 D125-90004259   DECO PNL CLIP M*Y 300-1200                                    1           M 06-0960    10/06/06   R035-70318000   0.38        0.46        LB 
+                                                                                                                                                                   
+6   2 P000-70014816   BKD PNT ARCT WHT                                              0           B XX-XXXX    MM/DD/YY                                           LB 
+                                                                                                                                                                   
+7   1 D170-00067660   PNL DECO INSUL 15.1X31.8                                      1           M 06-0960    10/06/06   R040-70012801   3.39        4.23        SF 
+                                                                                                                                                                   
+8   1 G070-70019824   CMLCK RTNR                                                    2           B XX-XXXX    MM/DD/YY                                           EA 
+                                                                                                                                                                   
+9   1 G070-70019823   CMLCK PAWL                                                    2           B XX-XXXX    MM/DD/YY                                           EA 
+                                                                                                                                                                   
+10  1 G070-70019837   CMLCK SHFT HEX HEAD 2 IN                                      2           B XX-XXXX    MM/DD/YY                                           EA 
+                                                                                                                                                                   

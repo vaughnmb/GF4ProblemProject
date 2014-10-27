@@ -1,0 +1,35 @@
+* text=auto !eol
+/.classpath -text
+/.jupiter -text
+/.project -text
+/build.xml -text
+review/codepoke-blevins.review -text
+review/codepoke-lee.review -text
+review/codepoke-rollins.review -text
+review/codepoke-vaughn.review -text
+src/client/com/iecokc/bom/model/bean/AssemblyContext.java -text
+src/client/com/iecokc/bom/model/bean/Message.java -text
+src/client/com/iecokc/bom/model/bean/MessageTarget.java -text
+src/client/com/iecokc/bom/model/bean/Product.java -text
+src/client/com/iecokc/bom/model/bean/Quantity.java -text
+src/client/com/iecokc/bom/model/bean/impl/AssemblyLink.java -text
+src/client/com/iecokc/bom/model/bean/impl/BaseAssemblyContext.java -text
+src/client/com/iecokc/bom/model/bean/impl/BaseMessageTarget.java -text
+src/client/com/iecokc/bom/model/bean/impl/BaseProduct.java -text
+src/client/com/iecokc/bom/model/bean/impl/PrmsProduct.java -text
+src/client/com/iecokc/bom/model/dao/ProductDao.java -text
+src/client/com/iecokc/bom/model/dao/impl/EngFileProductDao.java -text
+src/client/com/iecokc/bom/model/exception/InvalidFileException.java -text
+src/client/com/iecokc/bom/model/util/ProductFilter.java -text
+src/client/com/iecokc/bom/model/util/ProductUtils.java -text
+src/hide/Test.java -text
+src/hide/TestRemoteBean.java -text
+src/main/com/iecokc/bom/model/dao/impl/PrmsIecProductDao.java -text
+src/main/com/iecokc/bom/model/dao/impl/PrmsProductDao.java -text
+src/main/log4j.properties -text
+src/test/BadBomStructure.xml -text
+src/test/BomStructure.xml -text
+src/test/bomstructure.dtd -text
+src/test/c000-00163264.txt -text svneol=unset#text/plain
+src/test/com/ieokc/bom/test/dao/BillOfMaterialTestDao.java -text
+src/test/d065-00067914.txt -text
