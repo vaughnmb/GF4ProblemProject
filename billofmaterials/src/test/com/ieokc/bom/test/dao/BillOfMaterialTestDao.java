@@ -1,6 +1,6 @@
 package com.ieokc.bom.test.dao;
 
-import java.io.IOException;
+/*import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
@@ -27,11 +27,11 @@ import com.iecokc.bom.model.dao.impl.PrmsProductDao;
 import com.iecokc.bom.model.exception.InvalidFileException;
 import com.iecokc.bom.model.util.ProductFilter;
 import com.iecokc.bom.model.util.ProductSelector;
-import com.iecokc.bom.model.util.ProductUtils;
+import com.iecokc.bom.model.util.ProductUtils;*/
 
 public class BillOfMaterialTestDao {
 
-	private InputStream xmlBom = null;
+	/*private InputStream xmlBom = null;
 
 	private InputStream txtBom = null;
 	private InputStream riserBom = null;
@@ -324,6 +324,6 @@ public class BillOfMaterialTestDao {
 		as400ds.setPassword("xxxxxxxxxxxxx");
 		
 		return as400ds;
-	}
+	}*/
 
 }

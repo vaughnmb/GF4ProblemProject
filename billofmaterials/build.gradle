@@ -10,7 +10,175 @@ ext {
 sourceCompatibility = 1.7
 version='1.0.1'
 
-apply from: 'http://dev.iecokc.com:8081/nexus/service/local/repositories/iec/content/gradle/common/1.0/common-1.0.gradle'
+repositories {    
+    maven {			 
+		url "http://repo1.maven.org/maven2/"                      
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main'
+        }
+        resources {
+            srcDir 'src/main'
+        }
+    }
+    
+    webapp {
+        java {
+            srcDir 'src/webapp'
+        }
+        resources {
+            srcDir 'src/webapp'
+        }
+    }
+    
+    client {
+        java {
+            srcDir 'src/client'
+        }
+        resources {
+            srcDir 'src/client'
+        }
+    }
+        
+    test {
+        java {
+            srcDir 'src/test'
+        }
+        resources {
+            srcDir 'src/test'
+        }
+    }
+}
+
+configurations{
+	deployables
+	transdeployables
+	nondeployables
+	clientArchives
+	deployEarArchives
+	deployWarArchives
+	jarArchives
+
+	all*.exclude group: 'iec', module: projectName
+	all*.exclude group: 'xml-apis'
+	all*.exclude group: 'xerces'
+	all*.exclude group: 'xalan'
+}
+
+eclipse {
+	classpath {
+		plusConfigurations += [configurations.deployables]
+		plusConfigurations += [configurations.transdeployables]
+		plusConfigurations += [configurations.nondeployables]
+	}
+}
+
+artifacts{
+	clientArchives file: file('dist/client/' + projectName + '-client-' + version + '.jar')	
+	deployEarArchives file: file('dist/ear/' + projectName + '-' + version + '.ear')
+	deployWarArchives file: file('dist/war/' + projectName + '-' + version + '.war')
+	jarArchives file: file('dist/jar/' + projectName + '-' + version + '.jar')
+}
+
+
+
+jar {
+	baseName = projectName
+	from sourceSets.main.output	
+	from sourceSets.client.output	
+	destinationDir = file('dist/jar')
+}
+
+task standAloneJar(type: Jar){
+	
+	doFirst{
+		exclude 'log4j.xml'
+	}
+
+	baseName = projectName
+	from sourceSets.main.output	
+	from sourceSets.client.output	
+	destinationDir = file('dist/jar')
+}
+
+task fatWar (type: War) {
+
+	baseName = projectName
+	destinationDir = file('dist/war')
+	
+	from 'WebRoot' // adds a file-set to the root of the archive
+    
+    	classpath = classpath.minus(sourceSets.client.output);
+	classpath = classpath.minus(sourceSets.main.output);
+	classpath = classpath.minus(configurations.compile)
+	classpath = classpath.minus(configurations.clientCompile)
+	classpath = classpath.minus(configurations.webappCompile)    
+	classpath sourceSets.webapp.output    
+	classpath configurations.deployables
+	classpath configurations.transdeployables		
+	classpath jar
+//	classpath fileTree('dist/jar') // adds a file-set to the WEB-INF/lib dir.
+
+}
+
+task skinnyWar(type: War) {
+	baseName = projectName
+    	from 'WebRoot' // adds a file-set to the root of the archive
+	classpath = sourceSets.webapp.output
+	destinationDir = file('dist/war')
+}
+
+task earSetup(type: Copy){	
+	from skinnyWar
+	from jar
+	into 'dist/earsetup'
+}
+
+task earLibsSetup(type: Copy){
+	from configurations.deployables
+	from configurations.transdeployables
+	into 'dist/earsetup/lib'
+}
+
+task createClient(type: Jar) {
+	baseName = projectName
+	appendix = 'client';
+	from sourceSets.client.output
+	destinationDir = file('dist/client')
+}
+
+task ear(type: Jar, dependsOn:[earLibsSetup]){
+	metaInf { from 'META-INF'}
+	baseName = projectName
+	extension = "ear"
+	from earSetup	
+	destinationDir = file('dist/ear')
+}
+
+task prepare <<{
+	def webInf = new File('WebRoot/WEB-INF')
+	webInf.mkdirs()
+}
+
+
+task cleanDist(type: Delete){
+	delete 'dist'
+}
+
+task cleanWarClasses(type: Delete){
+	delete 'WebRoot/WEB-INF/classes'
+	delete 'WebRoot/WEB-INF/lib'
+}
+
+task createJar(dependsOn:[clean, cleanDist, test, standAloneJar])
+
+task createWar(dependsOn:[clean, cleanDist, cleanWarClasses, prepare, test, fatWar])
+
+task createEar(dependsOn:[clean, cleanDist, cleanWarClasses, prepare, test, createClient, ear])
 
 dependencies {
 	
@@ -34,6 +202,5 @@ dependencies {
 	webappCompile sourceSets.main.output
 	
 	testCompile 'junit:junit:4.9'
-	testCompile 'jtopen:jtopen:4.9'
 		
 }
